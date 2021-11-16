@@ -1,10 +1,13 @@
 nav {
   font-family: "Source Sans Pro";
   height: 120px;
+  width: 100%;
   background-color: #4056a1;
   color: #FFFFFF;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  z-index: -1;
 
 }
 
@@ -12,7 +15,7 @@ nav {
 span {
   font-family: Bungee;
   display: inline-block;
-  padding: 1.5em;
+  padding: 1.5em 0 0 1.5em;
 }
 
 ul {
