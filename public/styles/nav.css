@@ -1,0 +1,39 @@
+nav {
+  font-family: "Source Sans Pro";
+  height: 120px;
+  background-color: #4056a1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+span {
+  font-family: Bungee;
+  display: inline-block;
+  padding: 1.5em;
+}
+
+ul {
+ display: inline-block;
+ list-style-type: none;
+ font-family: "Source Sans Pro";
+ color: white;
+
+}
+
+li {
+ font-size: 300;
+}
+
+.nav-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5em;
+}
+
+i {
+  color: red;
+}
