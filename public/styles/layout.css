@@ -39,3 +39,12 @@ body {
   margin: auto;
 }
 
+.red output {
+  color: red;
+}
+
+.all-tweets p {
+
+  padding-bottom: 1em;
+  border-bottom: solid black 2px;
+}
