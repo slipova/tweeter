@@ -61,7 +61,7 @@
       <div class="nav-arrow">
 
         <li><strong>Write </strong>&#160a new tweet</li>
-        <i class="fas fa-angle-double-down"></i>
+        <button id="nav-arrow"><i class="fas fa-angle-double-down"></i></button>
 
       </div>
 
@@ -74,10 +74,10 @@
 
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <div id="error">ERROR</div>
+      <div id="error"></div>
       <form method="POST" action="/tweets/" class="create-tweet">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
+        <!-- <label for="tweet-text">What are you humming about?</label> -->
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="submit-count">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>

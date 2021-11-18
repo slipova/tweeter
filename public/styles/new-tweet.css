@@ -2,8 +2,10 @@
   background-color: #FFFFCC;
   display: flex;
   flex-direction: column;
-  padding: 0 1em 1em;
+  padding: 1em;
+  display: none;
 }
+
 label {
   display: block;
   font-weight: bold;
@@ -14,6 +16,8 @@ border: transparent;
 border-bottom: solid black;
 width: 100%;
 background-color: inherit;
+margin-top: 0.5em;
+outline: none;
 }
 
 .submit-count {
@@ -32,4 +36,7 @@ button {
   color: red;
 }
 
+textarea:focus::placeholder {
+  color: transparent;
+}
 

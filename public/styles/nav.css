@@ -10,7 +10,6 @@ nav {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  /* relative to the body tag */
   z-index: 0;
 
 }
@@ -42,12 +41,16 @@ li {
   padding: 0 1.5em;
 }
 
+#nav-arrow {
+  background-color: #9b9b6d;
+}
+
 i {
   color: rgb(223, 91, 91);
 }
 
 @media only screen and (min-width: 1024px) {
-  nav {
+  nav, #nav-arrow {
     background-color: #6b6bc9;
   }
 }
