@@ -30,7 +30,7 @@ $(document).ready(function() {
     };
 
     return (`<article class="tweet">
-    <header><div class="image-name">
+    <header class="tweet-profile"><div class="image-name">
     <img src="${tweetData.user.avatars}"><div>${tweetData.user.name}</div></div><div>${tweetData.user.handle}</div>
     </header>
     <p>${escape(tweetData.content.text)}</p>
@@ -73,6 +73,7 @@ $(document).ready(function() {
       $errorMessage.hide()
       $.post("/tweets", data)
         .then(() => {
+          $('textarea').val('');
           loadTweets();
         })
     }

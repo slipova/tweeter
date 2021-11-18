@@ -32,7 +32,7 @@ article.tweet header {
 }
 
 .all-tweets {
-  background-color: rgb(213, 213, 161);
+  background-color: #FFFFCC;
   padding: em 0;
   padding-bottom: 1em;
 }

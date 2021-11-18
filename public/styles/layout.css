@@ -23,7 +23,7 @@ html {
 body {
   color: #545149;
   background-image: url("/images/batthern.png");
-  background-color: #aace6f;
+  background-color: #CCCC99;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
   width: 100%;
@@ -55,4 +55,14 @@ body {
   margin: 1em;
   display: none;
   padding: 0.5em;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 60%;
+    margin: 120px 0 0 0;
+    float: right;
+  }
+
 }
