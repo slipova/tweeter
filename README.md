@@ -4,7 +4,9 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 
+!["Desktop view"](https://github.com/slipova/tweeter/blob/master/docs/desktop_view.png)
 
+!["Tablet view"](https://github.com/slipova/tweeter/blob/master/docs/tablet_view.png)
 
 
 
