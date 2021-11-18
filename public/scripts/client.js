@@ -22,7 +22,7 @@ const tweetData = {
 $(document).ready(function() {
 
   const createTweetElement = function(tweetData) {
-    //cross-site scripting
+    //cross-site scripting --- add to tweet p
     const escape = function(str) {
       let p = document.createElement("p");
       p.appendChild(document.createTextNode(str));
@@ -47,7 +47,7 @@ $(document).ready(function() {
     </article>`);
   };
 
-
+  //add new tweet to database
   const $tweet = createTweetElement(tweetData);
   $('#tweets-container').append($tweet);
 
@@ -63,6 +63,7 @@ $(document).ready(function() {
     const $errorMessage = $("#error");
     let data = $(".create-tweet").serialize();
 
+    //tweet validation
     if (data === "text=" || data === null) {
       $errorMessage.slideDown();
       $errorMessage.html(`<i class="fas fa-exclamation-triangle"></i> Please enter a message <i class="fas fa-exclamation-triangle"></i>`);
@@ -92,7 +93,7 @@ $(document).ready(function() {
 
   loadTweets();
 
-
+  //navigation button shows container for new tweet
   const showTweetContainer = function() {
     $("#nav-arrow").click(() => {
       $(".new-tweet").show(1000);
