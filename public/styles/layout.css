@@ -48,3 +48,10 @@ body {
   padding-bottom: 1em;
   border-bottom: solid black 2px;
 }
+
+#error {
+  color: red;
+  border: solid red 2px;
+  margin: 1em;
+  display: none;
+}

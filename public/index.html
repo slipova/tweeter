@@ -62,13 +62,13 @@
     </ul>
   </nav>
 
-
   <!-- Page-specific (main) content here -->
   <main class="container">
 
 
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
+      <div id="error">ERROR</div>
       <form method="POST" action="/tweets/" class="create-tweet">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
@@ -80,7 +80,6 @@
     </section>
 
     <section class="all-tweets" id="tweets-container">
-      <article class="upload-tweet"></article>
     </section>
 
   </main>
