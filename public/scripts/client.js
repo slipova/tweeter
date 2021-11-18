@@ -49,8 +49,8 @@ $(document).ready(function() {
 
 
   const renderTweets = function(tweets) {
-    console.log(tweets)
-    tweets.forEach((tweetObj) => $('#tweets-container').append(createTweetElement(tweetObj)))
+
+    tweets.forEach((tweetObj) => $('#tweets-container').prepend(createTweetElement(tweetObj)))
   }
 
 
@@ -65,10 +65,12 @@ $(document).ready(function() {
     } else if (data.length > 145) {
       alert("Maximum characters exceeded")
     } else {
-      $.post("/tweets", data)
-    }
 
-    loadTweets()
+      $.post("/tweets", data)
+        .then(() => {
+          loadTweets();
+        })
+    }
 
   })
 
@@ -80,7 +82,7 @@ $(document).ready(function() {
       });
   }
 
-  console.log(loadTweets());
+  loadTweets();
 
 })
 
