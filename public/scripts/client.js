@@ -62,12 +62,12 @@ $(document).ready(function() {
     let data = $(".create-tweet").serialize();
 
     if (data === "text=" || data === null) {
-      $errorMessage.show();
-      $errorMessage.html("Please enter a message")
+      $errorMessage.slideDown();
+      $errorMessage.html(`<i class="fas fa-exclamation-triangle"></i> Please enter a message <i class="fas fa-exclamation-triangle"></i>`)
 
     } else if (data.length > 145) {
-      $errorMessage.show();
-      return $errorMessage.html("Maximum characters exceeded")
+      $errorMessage.slideDown();
+      return $errorMessage.html(`<i class="fas fa-exclamation-triangle"></i> Maximum characters exceeded <i class="fas fa-exclamation-triangle"></i>`)
 
     } else {
       $errorMessage.hide()
