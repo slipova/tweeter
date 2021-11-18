@@ -14,7 +14,7 @@ const tweetData = {
     "text": "If I have seen further it is by standing on the shoulders of giants"
   },
   "created_at": 1461116232227
-}
+};
 
 
 
@@ -31,7 +31,8 @@ $(document).ready(function() {
 
     return (`<article class="tweet">
     <header class="tweet-profile"><div class="image-name">
-    <img src="${tweetData.user.avatars}"><div>${tweetData.user.name}</div></div><div>${tweetData.user.handle}</div>
+    <img src="${tweetData.user.avatars}"><div>${tweetData.user.name}</div></div>
+    <div>${tweetData.user.handle}</div>
     </header>
     <p>${escape(tweetData.content.text)}</p>
     <footer>
@@ -44,53 +45,63 @@ $(document).ready(function() {
     </div>
     </footer>
     </article>`);
-  }
+  };
+
 
   const $tweet = createTweetElement(tweetData);
   $('#tweets-container').append($tweet);
 
 
   const renderTweets = function(tweets) {
-    tweets.forEach((tweetObj) => $('#tweets-container').prepend(createTweetElement(tweetObj)))
-  }
+    tweets.forEach((tweetObj) => $('#tweets-container').prepend(createTweetElement(tweetObj)));
+  };
 
 
   $("form").submit((event) => {
     event.preventDefault();
 
-    const $errorMessage = $("#error")
+    const $errorMessage = $("#error");
     let data = $(".create-tweet").serialize();
 
     if (data === "text=" || data === null) {
       $errorMessage.slideDown();
-      $errorMessage.html(`<i class="fas fa-exclamation-triangle"></i> Please enter a message <i class="fas fa-exclamation-triangle"></i>`)
+      $errorMessage.html(`<i class="fas fa-exclamation-triangle"></i> Please enter a message <i class="fas fa-exclamation-triangle"></i>`);
 
     } else if (data.length > 145) {
       $errorMessage.slideDown();
-      return $errorMessage.html(`<i class="fas fa-exclamation-triangle"></i> Maximum characters exceeded <i class="fas fa-exclamation-triangle"></i>`)
+      return $errorMessage.html(`<i class="fas fa-exclamation-triangle"></i> Maximum characters exceeded <i class="fas fa-exclamation-triangle"></i>`);
 
     } else {
-      $errorMessage.hide()
+      $errorMessage.hide();
       $.post("/tweets", data)
         .then(() => {
           $('textarea').val('');
           loadTweets();
-        })
+        });
     }
-
-  })
+  });
 
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function(data) {
+        $(".counter").val("140");
         renderTweets(data)
 
       });
-  }
+  };
 
   loadTweets();
 
-})
+
+  const showTweetContainer = function() {
+    $("#nav-arrow").click(() => {
+      $(".new-tweet").show(1000);
+    })
+  }
+
+  showTweetContainer();
+
+});
 
 
 

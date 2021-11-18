@@ -2,8 +2,8 @@ $(document).ready(function() {
 
   const $input = $("#tweet-text");
   $input.on('input', function() {
-    const charactersUsed = $input.val().length
-    const $counter = $(".counter")
+    const charactersUsed = $input.val().length;
+    const $counter = $(".counter");
     let charactersRemaining = 140 - charactersUsed;
 
     if (charactersRemaining < 0) {
@@ -17,4 +17,4 @@ $(document).ready(function() {
 
     // alternative (this.value.length)
   });
-})
+});
