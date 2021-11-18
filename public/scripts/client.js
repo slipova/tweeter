@@ -19,36 +19,6 @@ const tweetData = {
 
 
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
-
-
-
-
 $(document).ready(function() {
 
 
@@ -79,11 +49,42 @@ $(document).ready(function() {
 
 
   const renderTweets = function(tweets) {
+    console.log(tweets)
     tweets.forEach((tweetObj) => $('#tweets-container').append(createTweetElement(tweetObj)))
   }
 
-  const $tweet2 = renderTweets(data);
-  // console.log($tweet2);
+
+
+
+  $("form").submit((event) => {
+    event.preventDefault();
+
+    let data = $(".create-tweet").serialize();
+    if (data === "text=" || data === null) {
+      alert("Please enter a message")
+    } else if (data.length > 145) {
+      alert("Maximum characters exceeded")
+    } else {
+      $.post("/tweets", data)
+    }
+
+    loadTweets()
+
+  })
+
+  const loadTweets = function() {
+    $.ajax('/tweets', { method: 'GET' })
+      .then(function(data) {
+        renderTweets(data)
+
+      });
+  }
+
+  console.log(loadTweets());
+
 })
+
+
+
 
 
