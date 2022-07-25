@@ -11,10 +11,14 @@
   "author": "Lighthouse Labs",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.15.2",
     "chance": "^1.0.2",
     "express": "^4.13.4",
-    "md5": "^2.1.0"
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.1.0",
+    "pg": "^8.7.1",
+    "serve": "^13.0.2"
   },
   "devDependencies": {
     "nodemon": "^1.9.2"
