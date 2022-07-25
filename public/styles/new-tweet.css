@@ -1,0 +1,42 @@
+.new-tweet {
+  background-color: #FFFFCC;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  display: none;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+#tweet-text {
+border: transparent;
+border-bottom: solid black;
+width: 100%;
+background-color: inherit;
+margin-top: 0.5em;
+outline: none;
+}
+
+.submit-count {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee';
+}
+
+button {
+  background-color: #6b6bc9;
+  color: white;
+  border-color: transparent;
+}
+
+.red.counter {
+  color: red;
+}
+
+textarea:focus::placeholder {
+  color: transparent;
+}
+

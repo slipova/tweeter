@@ -1,0 +1,31 @@
+header {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .profile {
+    width: 40%;
+    float: left;
+    margin-top: 240px;
+  }
+
+.avatar-name {
+    border: 2px solid rgb(51, 95, 123);
+    background-color: #99CC99;
+    padding: 1.5em;
+    text-align: center;
+  }
+} 
+
+
+
+

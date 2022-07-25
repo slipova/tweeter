@@ -1,0 +1,56 @@
+
+
+nav {
+  font-family: "Source Sans Pro";
+  height: 120px;
+  width: 100%;
+  background-color: #9b9b6d;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 0;
+
+}
+
+
+span {
+  font-family: Bungee;
+  display: inline-block;
+  font-size: 2em;
+  padding: 1em 0 0 1.5em;
+}
+
+ul {
+ display: inline-block;
+ list-style-type: none;
+ font-family: "Source Sans Pro";
+ color: white;
+
+}
+
+li {
+ font-size: 300;
+}
+
+.nav-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5em;
+}
+
+#nav-arrow {
+  background-color: #9b9b6d;
+}
+
+i {
+  color: rgb(223, 91, 91);
+}
+
+@media only screen and (min-width: 1024px) {
+  nav, #nav-arrow {
+    background-color: #6b6bc9;
+  }
+}
