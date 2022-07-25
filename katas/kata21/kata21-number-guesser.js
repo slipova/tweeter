@@ -20,6 +20,6 @@ while (answer !== numberToGuess) {
   }
 }
 
-prompt("You win!")
+prompt("You guessed it!")
 
 
